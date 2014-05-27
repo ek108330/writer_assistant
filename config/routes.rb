@@ -1,4 +1,6 @@
 WriterAssistant::Application.routes.draw do
+  get "static_pages/home"
+  get "static_pages/help"
   resources :scenes
 
   resources :personnes
@@ -6,6 +8,13 @@ WriterAssistant::Application.routes.draw do
   resources :anecdotes
 
   resources :chapitres
+
+  
+  root :to => 'chapitres#new'
+
+  get "static_pages/home"
+
+  #get '/chapitres', :to => 'chapitres#new'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

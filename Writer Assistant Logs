@@ -51,11 +51,24 @@ Ajout de min et max pour validation, ex:
 $ rails s
 > http://localhost:3000/chapitres
 
+*** Sauvegarde :
 
+$ git add .
+$ git commit -am "Done with first steps"
 
+$ git checkout master
+$ git merge first-step
 
+$ git push
 
+**********************************************************
+Pages statiques
+**********************************************************
 
+New branch:
+$ git checkout -b static-pages
+
+Ajout de root :to => 'chapitres#new' dans routes.rb
 
 
 
@@ -80,10 +93,10 @@ $ rails s
 *** Sauvegarde :
 
 $ git add .
-$ git commit -am "Done with first steps"
+$ git commit -am "Done with static pages"
 
 $ git checkout master
-$ git merge first-step
+$ git merge static-pages
 
 $ rspec spec/
 > Tests verts
