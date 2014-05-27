@@ -1,3 +1,11 @@
+		Writer Assistant, 27/05/2014
+		Kevin Elsenberger
+		elsenberger.k@gmail.com
+
+**********************************************************
+Initialisation
+**********************************************************
+
 $ cd  ̃Bureau
 $ rails new writer_assistant -T
 $ cd writer_assistant
@@ -17,14 +25,65 @@ $ git add .
 
 $ git push origin master
 
+**********************************************************
+First step
+**********************************************************
+
+$ git checkout -b first-step
+
+$ rails generate scaffold Chapitre numero:integer titre:string
+$ rails destroy scaffold Chapitre
+$ rails generate scaffold Chapitre numero:integer titre:string 
+$ rails generate scaffold Anecdote sujet:text theme:string
+$ rails generate scaffold Scene recit:text periode:date
+$ rails generate scaffold Personne nom:string
+$ rails destroy scaffold Scene
+$ rails generate scaffold Scene recit:text periode:date lieu:string
+
+$ rake db:migrate
+
+Modif de app/models/ *anecdote, chapitre, scene et personne*
+Ajout de min et max pour validation, ex:
+	validates :nom, :length => { :maximum => 200, :minimum => 1 }
+	validates :sujet, :length => { :maximum => 200 }, :length => { :minimum => 1 }
+	validates :theme, :length => { :maximum => 200 }, :length => { :minimum => 1 }
+
+$ rails s
+> http://localhost:3000/chapitres
 
 
-Sauvegarde :
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*** Sauvegarde :
+
 $ git add .
-$ git commit -am "Done with static pages"
+$ git commit -am "Done with first steps"
 
 $ git checkout master
-$ git merge static-pages
+$ git merge first-step
 
 $ rspec spec/
 > Tests verts
