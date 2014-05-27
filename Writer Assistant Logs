@@ -106,17 +106,28 @@ $ bundle exec rspec spec/requests/static_pages_spec.rb
 $ bundle exec rspec spec/requests/static_pages_spec.rb
 > 1 example, 0 failures
 
+*** Sauvegarde :
 
+$ git add .
+$ git commit -m "Done with first tests"
 
+$ git checkout master
+$ git merge tests
 
+$ rspec spec/
+> Tests verts
+$ git push
 
+**********************************************************
+Custom css
+**********************************************************
 
+New branch:
+$ git checkout -b custom-css
 
+Generer paths
 
-
-
-
-
+$ rake routes
 
 
 
@@ -130,11 +141,20 @@ $ bundle exec rspec spec/requests/static_pages_spec.rb
 *** Sauvegarde :
 
 $ git add .
-git commit -m "Done with first tests"
+$ git commit -m "Done with css"
 
 $ git checkout master
-$ git merge tests
+$ git merge custom-css
 
 $ rspec spec/
 > Tests verts
 $ git push
+
+
+
+
+
+
+
+
+

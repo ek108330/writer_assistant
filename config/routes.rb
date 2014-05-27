@@ -1,6 +1,5 @@
 WriterAssistant::Application.routes.draw do
-  get "static_pages/home"
-  get "static_pages/help"
+  
   resources :scenes
 
   resources :personnes
@@ -10,7 +9,7 @@ WriterAssistant::Application.routes.draw do
   resources :chapitres
 
   
-  root :to => 'chapitres#new'
+  root :to => "static_pages#home"
 
   get "static_pages/home"
   get "static_pages/help"

@@ -1,0 +1,211 @@
+body {
+background: #cff;
+background-image:url('images/diamond.png');
+}
+
+.container {
+
+margin-left: 10%;
+margin-right: 10%;
+}
+body {
+/*background: #cff;*/
+/*background: url(app/assets/images/diamond.png);*/
+background-image:url('images/diamond.png');
+background-attachment:fixed;
+text-align: center;
+}
+header {
+padding-top: 20px;
+margin-left: 20%;
+margin-right: 20%;
+}
+header img {
+padding: 1em;
+background: #ECECEC;
+}
+section {
+margin-top: 1em;
+font-size: 120%;
+padding: 20px;
+background: #ECECEC;
+}
+section h1 {
+font-size: 200%;
+}
+
+.center {
+	text-align: center;
+}
+
+
+
+
+/* Links */
+a {
+color: #09c;
+text-decoration: none;
+}
+a:hover {
+color: #069;
+text-decoration: underline;
+}
+a:visited {
+color: #069;
+}
+
+/* Navigation */
+nav {
+float: right;
+}
+nav {
+background-color: white;
+padding: 0 0.7em;
+white-space: nowrap;
+}
+nav ul {
+margin: 0;
+padding: 0;
+}
+nav ul li {
+list-style-type: none;
+display: inline-block;
+padding: 0.2em 0;
+}
+nav ul li a {
+padding: 0 5px;
+font-weight: bold;
+}
+nav ul li a:visited {
+color: #09c;
+}
+nav ul li a:hover {
+text-decoration: underline;
+}
+
+/* Sign up button */
+/*a.signup_button {
+margin-left: auto;
+margin-right: auto;
+display: block;
+text-align: center;
+width: 190px;
+color: #fff;
+background: #006400;
+font-size: 150%;
+font-weight: bold;
+padding: 20px;
+}*/
+
+a.signup_button{
+		background: #ECECEC;
+		border-radius: 15px;
+		padding: 10px 20px;
+		display: block;
+		font-family: arial;
+		font-weight: bold;
+		color:#7f7f7f;
+		text-decoration: none;
+		text-shadow:0px 1px 0px #fff;
+		border:1px solid #a7a7a7;
+		width: 170px;
+		margin:0px auto;
+		margin-top:100px;
+		box-shadow: 0px 2px 1px white inset, 0px -2px 8px white, 0px 2px 5px rgba(0, 0, 0, 0.1), 0px 8px 10px rgba(0, 0, 0, 0.1);
+		-webkit-transition:box-shadow 0.5s;
+	}
+	a.signup_button i{
+		float: right;
+		margin-top: 2px;
+	}
+	a.signup_button:hover{
+		box-shadow: 0px 2px 1px white inset, 0px -2px 20px white, 0px 2px 5px rgba(0, 0, 0, 0.1), 0px 8px 10px rgba(0, 0, 0, 0.1);
+	}
+	a.signup_button:active{
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5) inset, 0px -2px 20px white, 0px 1px 5px rgba(0, 0, 0, 0.1), 0px 2px 10px rgba(0, 0, 0, 0.1);
+		background:-webkit-linear-gradient(top, #d1d1d1 0%,#ECECEC 100%);
+	}
+
+/* Round corners */
+.round {
+-moz-border-radius:
+10px;
+-webkit-border-radius: 10px;
+border-radius:
+10px;
+}
+
+footer {
+text-align: center;
+margin-top: 10px;
+width: 710px;
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+}
+footer nav {
+float: none;
+}
+
+
+/* User show page */
+table.profile {
+width: 100%;
+margin-bottom: 0;
+}
+td.main {
+width: 70%;
+padding: 1em;
+}
+td.sidebar {
+width: 30%;
+padding: 1em;
+vertical-align: top;
+background: #ffc;
+}
+.profile img.gravatar {
+border: 1px solid #999;
+margin-bottom: -15px;
+}
+
+/* ++*/
+div.field, div.actions {
+margin-bottom: 10px;
+}
+
+/* Erreurs de signup*/
+.field_with_errors {
+margin-top: 10px;
+padding: 2px;
+background-color: red;
+display: table;
+}
+.field_with_errors label {
+color: #fff;
+}
+#error_explanation {
+width: 400px;
+border: 2px solid red;
+padding: 7px;
+padding-bottom: 12px;
+margin-bottom: 20px;
+background-color: #f0f0f0;
+}
+#error_explanation h2 {
+text-align: left;
+font-weight: bold;
+padding: 5px 5px 5px 15px;
+font-size: 12px;
+margin: -7px;
+background-color: #c00;
+color: #fff;
+}
+#error_explanation p {
+color: #333;
+margin-bottom: 0;
+padding: 5px;
+}
+#error_explanation ul li {
+font-size: 12px;
+list-style: square;
+}
