@@ -13,6 +13,7 @@ WriterAssistant::Application.routes.draw do
   root :to => 'chapitres#new'
 
   get "static_pages/home"
+  get "static_pages/help"
 
   #get '/chapitres', :to => 'chapitres#new'
 

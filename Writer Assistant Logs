@@ -70,6 +70,43 @@ $ git checkout -b static-pages
 
 Ajout de root :to => 'chapitres#new' dans routes.rb
 
+$ rails generate controller StaticPages home help --no-test-framework
+
+Edition des routes
+
+*** Sauvegarde :
+
+$ git add .
+git commit -m "Add a StaticPages controller"
+
+$ git checkout master
+$ git merge static-pages
+
+$ rspec spec/
+> Tests verts
+$ git push
+
+**********************************************************
+Tests
+**********************************************************
+
+New branch:
+$ git checkout -b tests
+
+$ rails generate integration_test static_pages
+
+! spec/requests/static_pages_spec.rb
+! spec/spec_helper.rb
+
+$ rake db:migrate RAILS_ENV=test
+$ bundle exec rspec spec/requests/static_pages_spec.rb
+> 2 examples, 2 failures
+
+! app/views/static_pages/home.html.erb
+$ bundle exec rspec spec/requests/static_pages_spec.rb
+> 1 example, 0 failures
+
+
 
 
 
@@ -93,10 +130,10 @@ Ajout de root :to => 'chapitres#new' dans routes.rb
 *** Sauvegarde :
 
 $ git add .
-$ git commit -am "Done with static pages"
+git commit -m "Done with first tests"
 
 $ git checkout master
-$ git merge static-pages
+$ git merge tests
 
 $ rspec spec/
 > Tests verts
