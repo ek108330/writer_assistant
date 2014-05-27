@@ -3,7 +3,7 @@ class CreateAnecdotes < ActiveRecord::Migration
     create_table :anecdotes do |t|
       t.text :sujet
       t.string :theme
-      t.integer :id_chapitre
+      t.integer :chapitre_id
 
       t.timestamps
     end

@@ -69,6 +69,6 @@ class AnecdotesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def anecdote_params
-      params.require(:anecdote).permit(:sujet, :theme)
+      params.require(:anecdote).permit(:sujet, :theme, :chapitre_id)
     end
 end

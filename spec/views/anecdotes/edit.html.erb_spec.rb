@@ -4,7 +4,8 @@ describe "anecdotes/edit" do
   before(:each) do
     @anecdote = assign(:anecdote, stub_model(Anecdote,
       :sujet => "MyText",
-      :theme => "MyString"
+      :theme => "MyString",
+      :chapitre_id => 1
     ))
   end
 
@@ -15,6 +16,7 @@ describe "anecdotes/edit" do
     assert_select "form[action=?][method=?]", anecdote_path(@anecdote), "post" do
       assert_select "textarea#anecdote_sujet[name=?]", "anecdote[sujet]"
       assert_select "input#anecdote_theme[name=?]", "anecdote[theme]"
+      assert_select "input#anecdote_chapitre_id[name=?]", "anecdote[chapitre_id]"
     end
   end
 end

@@ -1,10 +1,10 @@
 WriterAssistant::Application.routes.draw do
   
-  resources :scenes
+  resources :anecdotes
 
   resources :personnes
 
-  resources :anecdotes
+  resources :scenes
 
   resources :chapitres
 

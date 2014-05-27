@@ -10,5 +10,10 @@
   <%= @anecdote.theme %>
 </p>
 
+<p>
+  <strong>Chapitre:</strong>
+  <%= @anecdote.chapitre_id %>
+</p>
+
 <%= link_to 'Edit', edit_anecdote_path(@anecdote) %> |
 <%= link_to 'Back', anecdotes_path %>

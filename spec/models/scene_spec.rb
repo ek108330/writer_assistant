@@ -6,7 +6,7 @@
 #  recit       :text
 #  periode     :date
 #  lieu        :string(255)
-#  id_chapitre :integer
+#  chapitre_id :integer
 #  created_at  :datetime
 #  updated_at  :datetime
 #

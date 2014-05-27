@@ -6,15 +6,16 @@
 #  recit       :text
 #  periode     :date
 #  lieu        :string(255)
-#  id_chapitre :integer
+#  chapitre_id :integer
 #  created_at  :datetime
 #  updated_at  :datetime
 #
 
 class Scene < ActiveRecord::Base
 	belongs_to :chapitre
+	has_many :personnes
 
 	validates :recit, :length => { :minimum => 1 }
 	validates :lieu, :length => { :maximum => 200, :minimum => 1 }
-	validates :id_chapitre, :length => { :maximum => 4 }
+	validates :chapitre_id, :length => { :maximum => 4 }
 end

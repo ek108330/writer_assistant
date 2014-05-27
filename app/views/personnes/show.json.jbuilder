@@ -1,1 +1,1 @@
-json.extract! @personne, :id, :nom, :created_at, :updated_at
+json.extract! @personne, :nom, :scene_id, :created_at, :updated_at

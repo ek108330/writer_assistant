@@ -180,9 +180,59 @@ $ rspec spec/
 > Tests verts
 $ git push
 
+**********************************************************
+Liens suite
+**********************************************************
 
-rails generate scaffold Scene recit:text periode:date lieu:string id_chapitre:integer
+New branch:
+$ git checkout -b liens-suite
 
 
 
+$ rails destroy scaffold Scene
+$ rails destroy scaffold Personne
+$ rails destroy scaffold Anecdote
+$ rails generate scaffold Scene recit:text periode:date lieu:string chapitre_id:integer
+$ rails generate scaffold Personne nom:string scene_id:integer
+$ rails generate scaffold Anecdote sujet:text theme:string chapitre_id:integer
 
+class Anecdote < ActiveRecord::Base
+	belongs_to :chapitre
+
+	validates :sujet, :length => { :maximum => 200, :minimum => 1  }
+	validates :theme, :length => { :maximum => 200, :minimum => 1  }
+	validates :chapitre_id, :length => { :maximum => 4 }
+end
+
+class Scene < ActiveRecord::Base
+	belongs_to :chapitre
+
+	validates :recit, :length => { :minimum => 1 }
+	validates :lieu, :length => { :maximum => 200, :minimum => 1 }
+	validates :chapitre_id, :length => { :maximum => 4 }
+end
+
+class Personne < ActiveRecord::Base
+	belongs_to :scene
+	has_many :personnes
+
+	validates :nom, :length => { :maximum => 200, :minimum => 1 }
+	validates :scene_id, :length => { :maximum => 4}
+end
+
+$ annotate
+$ bundle exec rake db:drop
+$ bundle exec rake db:migrate
+$ rails s
+
+*** Sauvegarde :
+
+$ git add .
+$ git commit -m "Done with links/relations"
+
+$ git checkout master
+$ git merge liens-suite
+
+$ rspec spec/
+> Tests verts
+$ git push

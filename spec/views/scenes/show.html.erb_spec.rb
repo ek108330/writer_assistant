@@ -5,7 +5,7 @@ describe "scenes/show" do
     @scene = assign(:scene, stub_model(Scene,
       :recit => "MyText",
       :lieu => "Lieu",
-      :id_chapitre => 1
+      :chapitre_id => 1
     ))
   end
 

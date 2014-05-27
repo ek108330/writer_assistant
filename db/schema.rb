@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140527171524) do
+ActiveRecord::Schema.define(version: 20140527174952) do
 
   create_table "anecdotes", force: true do |t|
     t.text     "sujet"
     t.string   "theme"
-    t.integer  "id_chapitre"
+    t.integer  "chapitre_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20140527171524) do
 
   create_table "personnes", force: true do |t|
     t.string   "nom"
-    t.integer  "id_scene"
+    t.integer  "scene_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 20140527171524) do
     t.text     "recit"
     t.date     "periode"
     t.string   "lieu"
-    t.integer  "id_chapitre"
+    t.integer  "chapitre_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

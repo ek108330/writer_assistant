@@ -4,7 +4,7 @@
 #
 #  id         :integer          not null, primary key
 #  nom        :string(255)
-#  id_scene   :integer
+#  scene_id   :integer
 #  created_at :datetime
 #  updated_at :datetime
 #

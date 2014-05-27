@@ -5,7 +5,7 @@
 #  id          :integer          not null, primary key
 #  sujet       :text
 #  theme       :string(255)
-#  id_chapitre :integer
+#  chapitre_id :integer
 #  created_at  :datetime
 #  updated_at  :datetime
 #

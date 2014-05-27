@@ -6,12 +6,12 @@ describe "scenes/index" do
       stub_model(Scene,
         :recit => "MyText",
         :lieu => "Lieu",
-        :id_chapitre => 1
+        :chapitre_id => 1
       ),
       stub_model(Scene,
         :recit => "MyText",
         :lieu => "Lieu",
-        :id_chapitre => 1
+        :chapitre_id => 1
       )
     ])
   end
