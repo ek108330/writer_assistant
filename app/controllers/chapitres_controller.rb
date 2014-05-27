@@ -56,7 +56,7 @@ class ChapitresController < ApplicationController
   def destroy
     @chapitre.destroy
     respond_to do |format|
-      format.html { redirect_to chapitres_url }
+      format.html { redirect_to chapitres_url, notice: 'Chapitre was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

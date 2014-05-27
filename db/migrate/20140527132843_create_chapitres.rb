@@ -6,5 +6,6 @@ class CreateChapitres < ActiveRecord::Migration
 
       t.timestamps
     end
+    add_index :chapitres, [:numero, :titre]
   end
 end

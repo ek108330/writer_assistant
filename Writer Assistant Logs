@@ -129,15 +129,6 @@ Generer paths
 
 $ rake routes
 
-
-
-
-
-
-
-
-
-
 *** Sauvegarde :
 
 $ git add .
@@ -150,10 +141,47 @@ $ rspec spec/
 > Tests verts
 $ git push
 
+**********************************************************
+Liens
+**********************************************************
+
+New branch:
+$ git checkout -b liens
+
+Un user peut avoir plusieurs microposts
+class User < ActiveRecord::Base
+  has_many :microposts
+end
+
+Chapitre : scenes anecdotes
+Scenes : personnages 
+Personnages
+Anecdotes
+
+Creation de factories
+$ rm -f spec/factories/chapitres.rb
+! db/migrate/[timestamp]_create_chapitres.rb
+! spec/models/chapitre_spec.rb
+
+bundle exec rake db:migrate
+bundle exec rake test:prepare
+bundle exec rspec spec/models/chapitre_spec.rb
 
 
+*** Sauvegarde :
+
+$ git add .
+$ git commit -m "Done with links/relations"
+
+$ git checkout master
+$ git merge liens
+
+$ rspec spec/
+> Tests verts
+$ git push
 
 
+rails generate scaffold Scene recit:text periode:date lieu:string id_chapitre:integer
 
 
 
