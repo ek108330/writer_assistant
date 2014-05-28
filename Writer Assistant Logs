@@ -262,3 +262,25 @@ $ rspec spec/
 $ git push
 
 
+**********************************************************
+tests
+**********************************************************
+
+New branch:
+$ git checkout -b tests-fin
+
+
+
+
+
+*** Sauvegarde :
+
+$ git add .
+$ git commit -m "Done with tests"
+
+$ git checkout master
+$ git merge tests-fin
+
+$ rspec spec/
+> Tests verts
+$ git push

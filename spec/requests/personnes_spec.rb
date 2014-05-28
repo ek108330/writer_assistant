@@ -1,11 +1,10 @@
 require 'spec_helper'
 
 describe "Personnes" do
-  describe "GET /personnes" do
-    it "works! (now write some real specs)" do
-      # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
-      get personnes_path
-      response.status.should be(200)
+  
+  it "should have the content 'Listing des personnes'" do
+      visit '/personnes'
+      expect(page).to have_content('Listing des personnes')
     end
-  end
+
 end

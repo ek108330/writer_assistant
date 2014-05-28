@@ -1,11 +1,10 @@
 require 'spec_helper'
 
 describe "Chapitres" do
-  describe "GET /chapitres" do
-    it "works! (now write some real specs)" do
-      # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
-      get chapitres_path
-      response.status.should be(200)
+  
+  it "should have the content 'Listing des chapitres'" do
+      visit '/chapitres'
+      expect(page).to have_content('Listing des chapitres')
     end
-  end
+
 end

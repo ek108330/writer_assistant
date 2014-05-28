@@ -13,6 +13,7 @@ class Chapitre < ActiveRecord::Base
 	validates :titre, :length => { :maximum => 100}
 	validates :numero, :length => { :minimum => 1 }
 
+	default_scope -> {order('numero ASC')}
 	has_many :scenes
 	has_many :anecdotes
 end
