@@ -12,9 +12,8 @@
 
 <p>
 	<TABLE align="center"> 
-  		<CAPTION><strong>Personnages associés:</strong></CAPTION> 
 		<TR> 
-			 <TH>Nom :</TH> 
+			 <TH><strong>Personnages associés : </strong></TH> 
   		</TR> 
   		<% @chapitre.scenes.each do |d| %>
 			<% d.personnes.each do |c| %>
@@ -29,7 +28,7 @@
 
 <p>
 	<TABLE align="center"> 
-  		<CAPTION><strong>Anecdotes associées:</strong></CAPTION> 
+  		<CAPTION><strong>Anecdotes associées : <%= @chapitre.anecdotes.count %></strong></CAPTION> 
 		<TR> 
 			 <TH>Sujet:</TH> 
 			 <TH>Theme:</TH> 
@@ -46,16 +45,14 @@
 
 <p>
 	<TABLE align="center"> 
-  		<CAPTION><strong>Scenes associées:</strong></CAPTION> 
+  		<CAPTION><strong>Scenes associées : <%= @chapitre.scenes.count %></strong></CAPTION> 
 		<TR> 
-			 <TH>Recit:</TH> 
-			 <TH>Periode:</TH> 
+			 <TH>Date:</TH> 
 			 <TH>Lieu:</TH> 
 			 <TH>N° Scene</TH>
   		</TR> 
 		<% @chapitre.scenes.each do |scene| %>
 			<TR> 
-				<TH><small><%= scene.recit %></small></TH> 
 				<TH><small><%=scene.periode %></small></TH> 
 				<TH><small><%=scene.lieu %></small></TH>
 				<TH><small><%=scene.id %></small></TH> 

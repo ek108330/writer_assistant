@@ -284,3 +284,26 @@ $ git merge tests-fin
 $ rspec spec/
 > Tests verts
 $ git push
+
+**********************************************************
+BDD
+**********************************************************
+
+New branch:
+$ git checkout -b bdd
+
+
+
+
+
+*** Sauvegarde :
+
+$ git add .
+$ git commit -m "Done with populate"
+
+$ git checkout master
+$ git merge bdd
+
+$ rspec spec/
+> Tests verts
+$ git push

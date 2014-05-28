@@ -6,8 +6,7 @@
       <th>Numero</th>
       <th>Titre</th>
       <th>Voir les infos</th>
-      <th>Modifier</th>
-      <th>Supprimer</th>
+      <th>Actions</th>
     </tr>
   </thead>
 
@@ -17,8 +16,7 @@
         <td><%= chapitre.numero %></td>
         <td><%= chapitre.titre %></td>
         <td><%= link_to 'Infos', chapitre %></td>
-        <td><%= link_to 'Editer', edit_chapitre_path(chapitre) %></td>
-        <td><%= link_to 'Supprimer', chapitre, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Editer', edit_chapitre_path(chapitre) %>|<%= link_to 'Supprimer', chapitre, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
