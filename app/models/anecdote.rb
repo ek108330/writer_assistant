@@ -13,6 +13,7 @@
 class Anecdote < ActiveRecord::Base
 	belongs_to :chapitre
 
+	default_scope -> {order('created_at DESC')}
 	validates :sujet, :length => { :maximum => 200, :minimum => 1  }
 	validates :theme, :length => { :maximum => 200, :minimum => 1  }
 	validates :chapitre_id, :length => { :maximum => 4 }

@@ -7,9 +7,9 @@
       <th>Periode</th>
       <th>Lieu</th>
       <th>Chapitre</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>N° Scene</th>
+      <th>Infos</th>
+      <th>Actions</th>
     </tr>
   </thead>
 
@@ -20,9 +20,9 @@
         <td><%= scene.periode %></td>
         <td><%= scene.lieu %></td>
         <td><%= scene.chapitre_id %></td>
-        <td><%= link_to 'Show', scene %></td>
-        <td><%= link_to 'Edit', edit_scene_path(scene) %></td>
-        <td><%= link_to 'Destroy', scene, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= scene.id %></td>
+        <td><%= link_to 'Infos', scene %></td>
+        <td><%= link_to 'Editer', edit_scene_path(scene) %>|<%= link_to 'Supprimer', scene, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Scene', new_scene_path %>
+<%= link_to "Créer Scene", new_scene_path, :class => "signup_button round" %>

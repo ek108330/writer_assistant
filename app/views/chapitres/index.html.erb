@@ -1,13 +1,13 @@
-<h1>Listing chapitres</h1>
+<h1>Listing des chapitres</h1>
 
 <table>
   <thead>
     <tr>
       <th>Numero</th>
       <th>Titre</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>Voir les infos</th>
+      <th>Modifier</th>
+      <th>Supprimer</th>
     </tr>
   </thead>
 
@@ -16,9 +16,9 @@
       <tr>
         <td><%= chapitre.numero %></td>
         <td><%= chapitre.titre %></td>
-        <td><%= link_to 'Show', chapitre %></td>
-        <td><%= link_to 'Edit', edit_chapitre_path(chapitre) %></td>
-        <td><%= link_to 'Destroy', chapitre, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Infos', chapitre %></td>
+        <td><%= link_to 'Editer', edit_chapitre_path(chapitre) %></td>
+        <td><%= link_to 'Supprimer', chapitre, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Chapitre', new_chapitre_path %>
+<%= link_to "Créer un nouveau chapitre", new_chapitre_path, :class => "signup_button round" %>

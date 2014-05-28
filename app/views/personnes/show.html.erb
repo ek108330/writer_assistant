@@ -10,5 +10,18 @@
   <%= @personne.scene_id %>
 </p>
 
+<p>
+  	<strong>Premier chapitre d'apparition : </strong>?
+<!--
+  	<% Scene.scene_id.each do |c| %>!
+  		<%= c.chapitre do |d| %>3
+  			<p><small>plop <%= d.id %></p></small>
+  		<% end %>
+	<% end %>
+-->
+</p>
+
+
+
 <%= link_to 'Edit', edit_personne_path(@personne) %> |
 <%= link_to 'Back', personnes_path %>

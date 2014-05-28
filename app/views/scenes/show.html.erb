@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
-
+<p>
+  <strong>Description de la scene n° </strong>
+  <%= @scene.id %>
+</p>
 <p>
   <strong>Recit:</strong>
   <%= @scene.recit %>
@@ -16,8 +19,23 @@
 </p>
 
 <p>
-  <strong>Chapitre:</strong>
+  <strong>Chapitre associé :</strong>
   <%= @scene.chapitre_id %>
+</p>
+
+<p>
+	<TABLE align="center"> 
+  		<CAPTION><strong>Personnages associés:</strong></CAPTION> 
+		<TR> 
+			 <TH>Nom :</TH> 
+  		</TR> 
+		<% @scene.personnes.each do |c| %>
+			<TR> 
+				<TH><small><%= c.nom %></small></TH> 
+			</TR>
+		<% end %>
+
+	</TABLE> 
 </p>
 
 <%= link_to 'Edit', edit_scene_path(@scene) %> |

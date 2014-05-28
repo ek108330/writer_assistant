@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Numero:</strong>
+  <strong>Description du chapitre n°</strong>
   <%= @chapitre.numero %>
 </p>
 
@@ -9,6 +9,63 @@
   <strong>Titre:</strong>
   <%= @chapitre.titre %>
 </p>
+
+<p>
+	<TABLE align="center"> 
+  		<CAPTION><strong>Personnages associés:</strong></CAPTION> 
+		<TR> 
+			 <TH>Nom :</TH> 
+  		</TR> 
+  		<% @chapitre.scenes.each do |d| %>
+			<% d.personnes.each do |c| %>
+			<TR> 
+				<TH><small><%= c.nom %></small></TH> 
+			</TR>
+			<% end %>
+		<% end %>
+
+	</TABLE> 
+</p>
+
+<p>
+	<TABLE align="center"> 
+  		<CAPTION><strong>Anecdotes associées:</strong></CAPTION> 
+		<TR> 
+			 <TH>Sujet:</TH> 
+			 <TH>Theme:</TH> 
+  		</TR> 
+		<% @chapitre.anecdotes.each do |c| %>
+			<TR> 
+				<TH><small><%= c.sujet %></small></TH> 
+				<TH><small><%= c.theme %></small></TH> 
+			</TR>
+		<% end %>
+
+	</TABLE> 
+</p>
+
+<p>
+	<TABLE align="center"> 
+  		<CAPTION><strong>Scenes associées:</strong></CAPTION> 
+		<TR> 
+			 <TH>Recit:</TH> 
+			 <TH>Periode:</TH> 
+			 <TH>Lieu:</TH> 
+			 <TH>N° Scene</TH>
+  		</TR> 
+		<% @chapitre.scenes.each do |scene| %>
+			<TR> 
+				<TH><small><%= scene.recit %></small></TH> 
+				<TH><small><%=scene.periode %></small></TH> 
+				<TH><small><%=scene.lieu %></small></TH>
+				<TH><small><%=scene.id %></small></TH> 
+			</TR>
+		<% end %>
+
+	</TABLE> 
+</p>
+
+
 
 <%= link_to 'Edit', edit_chapitre_path(@chapitre) %> |
 <%= link_to 'Back', chapitres_path %>

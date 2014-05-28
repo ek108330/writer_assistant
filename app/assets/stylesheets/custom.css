@@ -3,6 +3,21 @@ background: #cff;
 background-image:url('images/diamond.png');
 }
 
+table {
+ border-width:1px; 
+ border-style:solid; 
+ border-color:black;
+ text-align: center;
+}
+th { 
+ border-width:1px;
+ border-style: dotted; 
+ border-color:red;
+ width:200px;
+ }
+
+
+
 .container {
 
 margin-left: 10%;
@@ -16,14 +31,30 @@ background-attachment:fixed;
 text-align: center;
 }
 header {
-padding-top: 20px;
+text-align: center;
+margin-top: 10px;
 margin-left: 20%;
 margin-right: 20%;
+text-align: center;
 }
 header img {
 padding: 1em;
 background: #ECECEC;
 }
+
+footer {
+text-align: center;
+margin-top: 10px;
+width: 710px;
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+text
+}
+footer nav {
+float: none;
+}
+
 section {
 margin-top: 1em;
 font-size: 120%;
@@ -108,11 +139,13 @@ a.signup_button{
 		text-decoration: none;
 		text-shadow:0px 1px 0px #fff;
 		border:1px solid #a7a7a7;
-		width: 170px;
+		width: auto;
+		min-width: 100px;
 		margin:0px auto;
 		margin-top:100px;
 		box-shadow: 0px 2px 1px white inset, 0px -2px 8px white, 0px 2px 5px rgba(0, 0, 0, 0.1), 0px 8px 10px rgba(0, 0, 0, 0.1);
 		-webkit-transition:box-shadow 0.5s;
+		display:inline;
 	}
 	a.signup_button i{
 		float: right;
@@ -134,19 +167,6 @@ a.signup_button{
 border-radius:
 10px;
 }
-
-footer {
-text-align: center;
-margin-top: 10px;
-width: 710px;
-margin-left: auto;
-margin-right: auto;
-text-align: center;
-}
-footer nav {
-float: none;
-}
-
 
 /* User show page */
 table.profile {
@@ -171,6 +191,7 @@ margin-bottom: -15px;
 /* ++*/
 div.field, div.actions {
 margin-bottom: 10px;
+min-width: 200px;
 }
 
 /* Erreurs de signup*/

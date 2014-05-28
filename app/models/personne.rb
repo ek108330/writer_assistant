@@ -12,6 +12,7 @@
 class Personne < ActiveRecord::Base
 	belongs_to :scene
 
+	default_scope -> {order('created_at DESC')}
 	validates :nom, :length => { :maximum => 200, :minimum => 1 }
-	validates :scene_id, :length => { :maximum => 4}
+	validates :scene_id, :length => { :maximum => 4 }
 end

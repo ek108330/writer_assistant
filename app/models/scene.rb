@@ -15,6 +15,7 @@ class Scene < ActiveRecord::Base
 	belongs_to :chapitre
 	has_many :personnes
 
+	default_scope -> {order('periode ASC')}
 	validates :recit, :length => { :minimum => 1 }
 	validates :lieu, :length => { :maximum => 200, :minimum => 1 }
 	validates :chapitre_id, :length => { :maximum => 4 }

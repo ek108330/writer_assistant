@@ -1,4 +1,4 @@
-<h1>Listing anecdotes</h1>
+<h1>Listing des anecdotes</h1>
 
 <table>
   <thead>
@@ -6,9 +6,9 @@
       <th>Sujet</th>
       <th>Theme</th>
       <th>Chapitre</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>Voir les infos</th>
+      <th>Modifier</th>
+      <th>Supprimer</th>
     </tr>
   </thead>
 
@@ -18,9 +18,9 @@
         <td><%= anecdote.sujet %></td>
         <td><%= anecdote.theme %></td>
         <td><%= anecdote.chapitre_id %></td>
-        <td><%= link_to 'Show', anecdote %></td>
-        <td><%= link_to 'Edit', edit_anecdote_path(anecdote) %></td>
-        <td><%= link_to 'Destroy', anecdote, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Infos', anecdote %></td>
+        <td><%= link_to 'Editer', edit_anecdote_path(anecdote) %></td>
+        <td><%= link_to 'Supprimer', anecdote, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Anecdote', new_anecdote_path %>
+<%= link_to "Créer Anecdote", '/anecdotes/new', :class => "signup_button round" %>

@@ -1,13 +1,12 @@
-<h1>Listing personnes</h1>
+<h1>Listing des personnes</h1>
 
 <table>
   <thead>
     <tr>
       <th>Nom</th>
       <th>Scene</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>Voir les infos</th>
+      <th>Actions</th>
     </tr>
   </thead>
 
@@ -16,9 +15,8 @@
       <tr>
         <td><%= personne.nom %></td>
         <td><%= personne.scene_id %></td>
-        <td><%= link_to 'Show', personne %></td>
-        <td><%= link_to 'Edit', edit_personne_path(personne) %></td>
-        <td><%= link_to 'Destroy', personne, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Infos', personne %></td>
+        <td><%= link_to 'Editer', edit_personne_path(personne) %>|<%= link_to 'Supprimer', personne, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Personne', new_personne_path %>
+<%= link_to "Créer un nouveau personnage", '/personnes/new', :class => "signup_button round" %>

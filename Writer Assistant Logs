@@ -236,3 +236,29 @@ $ git merge liens-suite
 $ rspec spec/
 > Tests verts
 $ git push
+
+
+**********************************************************
+Apercu
+**********************************************************
+
+New branch:
+$ git checkout -b apercu
+
+
+
+
+
+*** Sauvegarde :
+
+$ git add .
+$ git commit -m "Done with views"
+
+$ git checkout master
+$ git merge apercu
+
+$ rspec spec/
+> Tests verts
+$ git push
+
+
